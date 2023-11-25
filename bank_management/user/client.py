@@ -1,3 +1,5 @@
+from datetime import datetime
+
 class client:
     total_number = 0
     def __init__(self,name,email,phoneNumber,balance,):
@@ -5,6 +7,8 @@ class client:
         self.email = email
         self.phoneNumber = phoneNumber
         self._balance = balance
+        self.create_time = datetime.now()
+        client.total_number +=1
     
     def save_money(self,amount):
         self._balance += amount
