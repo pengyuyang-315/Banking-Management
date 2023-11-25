@@ -1,6 +1,7 @@
 from datetime import datetime
 
 class client:
+    
     total_number = 0
     def __init__(self,name,email,phoneNumber,balance,):
         self.name = name
