@@ -31,6 +31,12 @@ class client:
 
     def show_information(self):
         return self._balance
+    
+    def add_contact(self,expect_contact):
+        self.list_contact.append(expect_contact)
+    
+    def return_contacts(self):
+        return self.add_contact
 
 c1 = client("Annie","xx.com","12345",1000)
 c2 = client("Billy","yy.com","543221",1000)
