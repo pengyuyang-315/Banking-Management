@@ -3,7 +3,7 @@ from datetime import datetime
 class client:
     
     total_number = 0
-    def __init__(self,name,email,phoneNumber,balance,):
+    def __init__(self,name,email,phoneNumber,balance):
         self.name = name
         self.email = email
         self.phoneNumber = phoneNumber
@@ -37,6 +37,7 @@ class client:
     
     def return_contacts(self):
         return self.add_contact
+
 
 c1 = client("Annie","xx.com","12345",1000)
 c2 = client("Billy","yy.com","543221",1000)
