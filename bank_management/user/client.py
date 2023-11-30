@@ -2,7 +2,6 @@ from datetime import datetime
 
 class client:
     
-    total_number = 0
     def __init__(self,name,email,phoneNumber,balance,password):
         self.name = name
         self.email = email
@@ -10,7 +9,6 @@ class client:
         self._balance = balance
         self._password = password
         self.create_time = datetime.now()
-        client.total_number +=1
     
     def save_money(self,amount):
         self._balance += amount
@@ -37,8 +35,15 @@ class client:
     
 
 
-# c1 = client("Annie","xx.com","12345",1000)
-# c2 = client("Billy","yy.com","543221",1000)
-# c1.transfer(500,c2)
-# print(c1.show_information())
-# print(c2.show_information())
+def new_user_registration():
+    name = input("Plz input your name: ")
+    phone = input("Plz input your phone number: ")
+    initial_balance = float(input("Plz save your money: "))
+    email = input("Plz input your email: ")
+    password = input("plz input your password: ")
+
+    c_new = client(name,email,phone,initial_balance,password)
+
+    
+    print("Welcome to be the member of this big family!")
+    return c_new
