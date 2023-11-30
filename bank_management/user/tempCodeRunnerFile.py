@@ -1,5 +1,0 @@
-# c1 = client("Annie","xx.com","12345",1000)
-# c2 = client("Billy","yy.com","543221",1000)
-# c1.transfer(500,c2)
-# print(c1.show_information())
-# print(c2.show_information())
