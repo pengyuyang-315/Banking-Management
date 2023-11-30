@@ -1,5 +1,6 @@
-from user.client import client
-from user.client import new_user_registration
+from .user.client import client
+from .user.client import new_user_registration
+from .user.admin import admin
 
 
 # initialize clients
@@ -45,8 +46,6 @@ def investment_manager_login():
     # 在这里编写基金管理员登录的代码
     print("基金管理员登录功能暂未实现。")
 
-if __name__ == "__main__":
-    main()
-    keys_list = list(clients_dict.keys())
-    print(keys_list)
-    
+def test():
+    ad =admin(12,12,12)
+    ad.show_client_detail(client1)
