@@ -34,7 +34,7 @@ class client:
         return information
     
     def edit_password(self,new_password):
-        self._password = new_password
+        self._password = int(new_password)
         
 
     def get_password(self):
@@ -45,7 +45,7 @@ def new_user_registration():
     phone = input("Plz input your phone number: ")
     initial_balance = float(input("Plz save your money: "))
     email = input("Plz input your email: ")
-    password = input("plz input your password: ")
+    password = int(input("plz input your password: "))
 
     c_new = client(name,email,phone,initial_balance,password)
 
