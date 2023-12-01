@@ -34,7 +34,7 @@ class client:
         return information
     
     def edit_password(self,new_password):
-        self._password = new_password
+        self._password = int(new_password)
         
 
     def get_password(self):
