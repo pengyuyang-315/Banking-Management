@@ -45,7 +45,7 @@ def new_user_registration():
     phone = input("Plz input your phone number: ")
     initial_balance = float(input("Plz save your money: "))
     email = input("Plz input your email: ")
-    password = input("plz input your password: ")
+    password = int(input("plz input your password: "))
 
     c_new = client(name,email,phone,initial_balance,password)
 
