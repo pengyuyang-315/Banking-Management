@@ -16,7 +16,7 @@ def show_all_investment(dict_mort,dict_zcb,dict_gov):
     for key, value in dict_zcb.items():
         print("Zero-coupon-bond type: ",key,"Zero-coupon-bond details: ",value.show_details())
     print("All government bond details")
-    for key, value in dict_zcb.items():
+    for key, value in dict_gov.items():
         print("Government bond type: ",key,"Government bond details: ",value.show_details())
 
 def recommendation_bond(user_risk,user_rate,choose_type,dict_mort,dict_zcb,dict_gov):#choose_type being 1/2/3, representing mort/zcb/gov
