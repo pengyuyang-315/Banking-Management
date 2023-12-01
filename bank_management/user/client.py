@@ -34,6 +34,9 @@ class client:
         information = [self.name,self.email,self.phoneNumber,self.create_time,self._balance]
         return information
     
+    def edit_password(self,new_password):
+        self._password = new_password
+        
 
 
 def new_user_registration():
