@@ -5,6 +5,7 @@ from user.client import client
 from user.admin import admin_login
 from user.client import existing_user_login
 
+
 def clients_initialization():
     # initialize clients
     client1 = client("Billy","billy@gmail.com",123456,1000,123456)
