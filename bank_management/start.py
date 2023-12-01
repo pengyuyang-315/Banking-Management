@@ -3,6 +3,7 @@ from user.client import new_user_registration
 from user.admin import admin
 from user.client import client
 from user.admin import admin_login
+from user.client import existing_user_login
 
 def clients_initialization():
     # initialize clients
@@ -33,32 +34,59 @@ admins_dict = admins_initialization()
 def main():
     
     print("Welcome to AZYY Bank")
-    role = int(input("Plz choose your role:\n1. I'm new to open account,2. Existing client,3. Admin,4. Investment Manager,5. Quit\n"))
+    role = int(input("Plz choose your role:\n1. I'm new to open account,2. Existing client,3. Admin,4. Quit\n"))
 
     if role == 1:
         c_new = new_user_registration()
         clients_dict[c_new.name] = c_new
         main()
     elif role == 2:
-        existing_user_login()
+        
+        client_current = existing_user_login(clients_dict)
+        if client_current is not None:
+            operationNumber = int(input("plz entre your operation number:\n 1.save money 2.withdraw money 3.check personal information 4. transfer 5.personal investment\n"))
+            if operationNumber == 1:
+                money_amount = int(input("plz entre amount to save\n"))
+                client_current.save_money(money_amount)
+            elif operationNumber == 2:
+                money_amount = int(input("plz entre amount to withdraw\n"))
+                client_current.withdraw_money(money_amount)
+            elif operationNumber == 3:
+                information = client_current.show_information()
+                columns = ["name","email","PhoneNumber","created_date","balance"]
+                for info, column in zip(information, columns):
+                    print(f"{column}: {info}")
+
+            elif operationNumber == 4:
+                receiver_name = input("plz entre the receiver's name:\n")
+                receiver = clients_dict.get(receiver_name)
+                if receiver is not None:
+                    if receiver_name == client_current.name:
+                        print("cannot transfer to yourself")
+                    else:
+                        amount = int(input("plz entre the amount you want to transfer\n"))
+                        client_current.transfer(amount,receiver)
+                else:
+                    print("Not existing")
+                print("transfer")
+                # client_current.transfer()
+            elif operationNumber == 5:
+                personal_invest()
+            else:
+                print("Invalid number")
+        main()
     elif role == 3:
         admin_login(admins_dict,clients_dict)
         main()
     elif role == 4:
-        investment_manager_login()
-    elif role == 5:
         print("Bye!")
         return 
     else:
         print("Invalid, run it again")
 
-def existing_user_login():
-    # 在这里编写老用户登录的代码
-    print("老用户登录功能暂未实现。")
 
-def investment_manager_login():
-    # 在这里编写基金管理员登录的代码
-    print("基金管理员登录功能暂未实现。")
+def personal_invest():
+    print("personal invest")
 
 def test():
     # ad =admin(12,12,12)
