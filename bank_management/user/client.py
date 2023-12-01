@@ -12,14 +12,14 @@ class client:
     
     def save_money(self,amount):
         self._balance += amount
-        print("Successfully saved!")
+        print(self.name,"Successfully saved!")
     
     def withdraw_money(self,amount):
         if self._balance<amount:
             print("Not enough balance")
         else:
             self._balance-=amount
-            print("Successfully withdrew")
+            print(self.name,"Successfully withdrew")
 
     def transfer(self,amount,receiver):
         if(self._balance<amount):
@@ -37,6 +37,8 @@ class client:
         self._password = new_password
         
 
+    def get_password(self):
+        return self._password
 
 def new_user_registration():
     name = input("Plz input your name: ")
@@ -50,3 +52,18 @@ def new_user_registration():
     
     print("Welcome to be the member of this big family!")
     return c_new
+
+def existing_user_login(clients_dict):
+    # existing_user_login
+    client_name = input("plz entre your name:\n")
+    client_current = clients_dict.get(client_name)
+    if client_current is not None:
+        password = int(input("plz entre your password\n"))
+        if password != client_current.get_password():
+            print("wrong password")
+            existing_user_login()
+        else:
+            print("Welcome",client_current.name)
+            return client_current
+    else:
+        print("Not existing")
