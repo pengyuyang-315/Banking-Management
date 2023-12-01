@@ -8,7 +8,6 @@ class client:
         self.phoneNumber = phoneNumber
         self._balance = balance
         self._password = password
-        
         self.create_time = datetime.now()
     
     def save_money(self,amount):

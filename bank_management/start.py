@@ -26,11 +26,12 @@ def admins_initialization():
     }
     return admins_dict
 
+clients_dict = clients_initialization()
+admins_dict = admins_initialization()
 
 
 def main():
-    clients_dict = clients_initialization()
-    admins_dict = admins_initialization()
+    
     print("Welcome to AZYY Bank")
     role = int(input("Plz choose your role:\n1. I'm new to open account,2. Existing client,3. Admin,4. Investment Manager,5. Quit\n"))
 
@@ -41,7 +42,8 @@ def main():
     elif role == 2:
         existing_user_login()
     elif role == 3:
-        admin_login(admins_dict)
+        admin_login(admins_dict,clients_dict)
+        main()
     elif role == 4:
         investment_manager_login()
     elif role == 5:
