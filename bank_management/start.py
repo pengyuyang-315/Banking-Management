@@ -1,9 +1,16 @@
+import sys
+import os
+
+# Add the project's root directory to the Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
 # from .user.client import client
-from user.client import new_user_registration
-from user.admin import admin
-from user.client import client
-from user.admin import admin_login
-from user.client import existing_user_login
+from bank_management.user.client import new_user_registration
+from bank_management.user.admin import admin
+from bank_management.user.client import client
+from bank_management.user.admin import admin_login
+from bank_management.user.client import existing_user_login
 
 
 def clients_initialization():
