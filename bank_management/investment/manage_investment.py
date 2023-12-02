@@ -1,6 +1,9 @@
-from investment import investment
-from investment import mortgage
+from investment.investment import investment
+from investment.investment import mortgage
+from investment.investment import zero_coupon_bond
+from investment.investment import government_bond
 import sys
+
 
 def edit_rate(inv,new_rate):
     inv.rate=new_rate
@@ -47,6 +50,41 @@ def recommendation_bond(user_risk,user_rate,choose_type,dict_mort,dict_zcb,dict_
         value.show_details()
 
     
+#initialization
+def mortgage_initialization():
+    # initialize 
+    mortgage1 = mortgage(0.03,5,5,2000)
+    mortgage2 = mortgage(0.04,7,5,3000)
+    mortgage3 = mortgage(0.05,8,10,4000)
+    mortgage_dict = {
+        1: mortgage1,
+        2: mortgage2,
+        3: mortgage3
+    }
+    return mortgage_dict
+
+def zcb_initialization():
+    # initialize 
+    zcb1 = zero_coupon_bond(0.03,5,2000,5)
+    zcb2 = zero_coupon_bond(0.06,10,3000,8)
+    zcb_dict = {
+        1: zcb1,
+        2: zcb2
+    }
+    return zcb_dict
+
+def gov_initialization():
+    # initialize 
+    gov1 = government_bond(0.03,5,2000,4,1)
+    gov2 = government_bond(0.05,5,3000,5,1)
+    gov3 = government_bond(0.05,6,2000,3,2)
+    gov_dict = {
+        1: gov1,
+        2: gov2,
+        3: gov3
+
+    }
+    return gov_dict
 
 
 """
