@@ -204,7 +204,7 @@ def personal_invest(c_new):
             elif type_operation==2:
                 use_dict[choice_operation].show_details()
 
-   
+
 
 
         
