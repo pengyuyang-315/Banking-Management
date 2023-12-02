@@ -6,25 +6,25 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # from .user.client import client
-from user.client import new_user_registration
-from user.admin import admin
-from user.client import client
-from user.admin import admin_login
-from user.client import existing_user_login
+from bank_management.user.client import new_user_registration
+from bank_management.user.admin import admin
+from bank_management.user.client import client
+from bank_management.user.admin import admin_login
+from bank_management.user.client import existing_user_login
 #from investment.start_invest import mortgage_initialization
 #from investment.start_invest import zcb_initialization
 #from investment.start_invest import gov_initialization
-from investment.investment import investment
-from investment.investment import mortgage
-from investment.investment import zero_coupon_bond
-from investment.investment import government_bond
-from investment.manage_investment import edit_rate
-from investment.manage_investment import edit_risk
-from investment.manage_investment import show_all_investment
-from investment.manage_investment import recommendation_bond
-from investment.manage_investment import mortgage_initialization
-from investment.manage_investment import zcb_initialization
-from investment.manage_investment import gov_initialization
+from bank_management.investment.investment import investment
+from bank_management.investment.investment import mortgage
+from bank_management.investment.investment import zero_coupon_bond
+from bank_management.investment.investment import government_bond
+from bank_management.investment.manage_investment import edit_rate
+from bank_management.investment.manage_investment import edit_risk
+from bank_management.investment.manage_investment import show_all_investment
+from bank_management.investment.manage_investment import recommendation_bond
+from bank_management.investment.manage_investment import mortgage_initialization
+from bank_management.investment.manage_investment import zcb_initialization
+from bank_management.investment.manage_investment import gov_initialization
 
 def clients_initialization():
     # initialize clients
