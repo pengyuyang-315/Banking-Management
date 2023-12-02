@@ -1,3 +1,10 @@
+import sys
+import os
+
+# Add the project's root directory to the Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
 # from .user.client import client
 from user.client import new_user_registration
 from user.admin import admin
