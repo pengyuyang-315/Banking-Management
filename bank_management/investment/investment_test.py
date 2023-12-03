@@ -5,8 +5,8 @@ import os
 # Add the project's root directory to the Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # from investment.investment import investment,mortgage
-from investment.investment import zero_coupon_bond,government_bond
-from investment.manage_investment import edit_rate, edit_risk, show_all_investment, recommendation_bond, mortgage_initialization, zcb_initialization, gov_initialization
+from investment import zero_coupon_bond,government_bond
+from manage_investment import edit_rate, edit_risk, show_all_investment, recommendation_bond, mortgage_initialization, zcb_initialization, gov_initialization
 
 class TestManageInvestmentModule(unittest.TestCase):
 

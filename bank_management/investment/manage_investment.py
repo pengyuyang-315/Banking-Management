@@ -1,13 +1,11 @@
-import sys
-import os
+# import sys
+# import os
 
-# Add the project's root directory to the Python path
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# # Add the project's root directory to the Python path
+# sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from investment.investment import investment
-from investment.investment import mortgage
-from investment.investment import zero_coupon_bond
-from investment.investment import government_bond
+from investment import investment,mortgage,zero_coupon_bond,government_bond
+
 
 
 
