@@ -10,6 +10,20 @@ The AZYY Bank Management System is a Python package designed to simulate a simpl
 
 The AZYY Bank Management System is built with several functions to manage user and admin interactions, as well as investment handling. Here, we provide details about key functions in the system.
 
+## How to test?
+Go to test.ipynb which is isolated from the requierd package "bank_management".
+Then run this file.
+
+```python
+from bank_management import start
+```
+This block is used to import functional py file from the required package
+
+```python
+start.main()
+```
+Then this block is used to start our program.
+
 ## Functions
 
 ### `clients_initialization()`
