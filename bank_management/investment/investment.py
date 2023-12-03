@@ -66,7 +66,7 @@ class zero_coupon_bond(investment):
         """
         Calculate and print the yield to maturity of the zero-coupon bond.
         """
-        print("the YTM of the zero coupon bond is: ", r)
+        print("the YTM of the zero coupon bond is: ", self.risk)
     
     def show_details(self):
         """

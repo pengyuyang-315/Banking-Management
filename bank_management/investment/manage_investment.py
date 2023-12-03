@@ -69,7 +69,7 @@ def recommendation_bond(user_risk,user_rate,choose_type,dict_mort,dict_zcb,dict_
     elif choose_type==3:
         dict_use=dict_gov
     
-    min_sum=sys.maxsize#maximum int
+    min_sum=200000
     value_store=[]
     
 

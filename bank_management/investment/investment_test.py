@@ -46,8 +46,7 @@ class TestManageInvestmentModule(unittest.TestCase):
     def test_recommendation_bond(self):
         # You can capture the output of the print statements and assert against it
         # For simplicity, this test just checks if the method runs without errors
-        recommendation_bond(user_risk=1, user_rate=0.04, choose_type=1, 
-                            dict_mort=self.mortgage_dict, dict_zcb=self.zcb_dict, dict_gov=self.gov_dict)
+        recommendation_bond(1, 5, 1, self.mortgage_dict, self.zcb_dict,self.gov_dict)
 
 
 if __name__ == '__main__':
