@@ -2,6 +2,10 @@ import unittest
 import sys
 import os
 
+# before run this test file, go to the 7th line manage_investment.py and delete a dot
+# into this "from investment import investment,mortgage,zero_coupon_bond,government_bond"
+
+
 # Add the project's root directory to the Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # from investment.investment import investment,mortgage

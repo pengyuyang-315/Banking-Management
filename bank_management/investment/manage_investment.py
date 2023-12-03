@@ -4,7 +4,7 @@
 # # Add the project's root directory to the Python path
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from investment import investment,mortgage,zero_coupon_bond,government_bond
+from .investment import investment,mortgage,zero_coupon_bond,government_bond
 
 
 

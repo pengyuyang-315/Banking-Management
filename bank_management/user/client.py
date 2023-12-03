@@ -125,10 +125,10 @@ def existing_user_login(clients_dict):
     - client: The logged-in client instance.
     """
     # existing_user_login
-    client_name = input("plz entre your name:\n")
+    client_name = input("plz enter your name:\n")
     client_current = clients_dict.get(client_name)
     if client_current is not None:
-        password = int(input("plz entre your password\n"))
+        password = int(input("plz enter your password\n"))
         if password != client_current.get_password():
             print("wrong password")
             existing_user_login()

@@ -66,11 +66,11 @@ def admin_login(admins_dict,clients_dict):
     - admins_dict (dict): Dictionary containing admin work numbers as keys and admin instances as values.
     - clients_dict (dict): Dictionary containing client names as keys and client instances as values.
     """
-    workNumber = int(input("plz entre your Working Number: "))
+    workNumber = int(input("plz enter your Working Number: "))
     ad_temp = admins_dict.get(workNumber)
     #check password
     if ad_temp is not None:
-        input_password = int(input("plz entre your password: "))
+        input_password = int(input("plz enter your password: "))
         if input_password == ad_temp.password:
             ad = admins_dict.get(workNumber)
             print(ad.name,"Successfully login")
@@ -88,23 +88,23 @@ def admin_operations(admin,clients_dict):
     - admin (admin): The admin instance.
     - clients_dict (dict): Dictionary containing client names as keys and client instances as values.
     """
-    operation_num =int(input("plz entre your operation number:\n 1. check client's detail 2. edit client's detail 3. quit\n"))
+    operation_num =int(input("plz enter your operation number:\n 1. check client's detail 2. edit client's detail 3. quit\n"))
     if operation_num == 3:
         print("bye, admin")
         return
     elif operation_num ==1 or operation_num==2:
-        client_name = input("plz entre the client's name:\n ")
+        client_name = input("plz enter the client's name:\n ")
         client_target = clients_dict.get(client_name)
         if client_target is not None:
             if operation_num == 1:
                 admin.show_client_detail(client_target)
                 admin_operations(admin,clients_dict)
             elif operation_num ==2:
-                editNumber = int(input("plz entre number:\n 1.edit password 2.edit phone number 3.edit email\n"))
+                editNumber = int(input("plz enter number:\n 1.edit password 2.edit phone number 3.edit email\n"))
                 if editNumber not in (1,2,3):
                     print("Invalid number")
                 else:
-                    new_detail = input("plz entre your edited detail:\n")
+                    new_detail = input("plz enter your edited detail:\n")
                     admin.edit_client_detail(client_target,editNumber,new_detail)
                     admin_operations(admin,clients_dict)
         else:

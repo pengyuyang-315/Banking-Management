@@ -78,12 +78,12 @@ def main():
         
         client_current = existing_user_login(clients_dict)
         if client_current is not None:
-            operationNumber = int(input("plz entre your operation number:\n 1.save money 2.withdraw money 3.check personal information 4. transfer 5.personal investment\n"))
+            operationNumber = int(input("plz enter your operation number:\n 1.save money 2.withdraw money 3.check personal information 4. transfer 5.personal investment\n"))
             if operationNumber == 1:
-                money_amount = int(input("plz entre amount to save\n"))
+                money_amount = int(input("plz enter amount to save\n"))
                 client_current.save_money(money_amount)
             elif operationNumber == 2:
-                money_amount = int(input("plz entre amount to withdraw\n"))
+                money_amount = int(input("plz enter amount to withdraw\n"))
                 client_current.withdraw_money(money_amount)
             elif operationNumber == 3:
                 information = client_current.show_information()
@@ -92,13 +92,13 @@ def main():
                     print(f"{column}: {info}")
 
             elif operationNumber == 4:
-                receiver_name = input("plz entre the receiver's name:\n")
+                receiver_name = input("plz enter the receiver's name:\n")
                 receiver = clients_dict.get(receiver_name)
                 if receiver is not None:
                     if receiver_name == client_current.name:
                         print("cannot transfer to yourself")
                     else:
-                        amount = int(input("plz entre the amount you want to transfer\n"))
+                        amount = int(input("plz enter the amount you want to transfer\n"))
                         client_current.transfer(amount,receiver)
                 else:
                     print("Not existing")
